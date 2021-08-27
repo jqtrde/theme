@@ -1,6 +1,5 @@
-" You probably always want to set this in your vim file
 set background=dark
-let g:colors_name="jqtrde.nvim"
+let g:colors_name="jqtrde"
 
 " By setting our module to nil, we clear lua's cache,
 " which means the require ahead will *always* occur.
@@ -14,8 +13,7 @@ let g:colors_name="jqtrde.nvim"
 "
 " The performance impact of this call can be measured in the hundreds of
 " *nanoseconds* and such could be considered "production safe".
-lua package.loaded['lush_theme.jqtrde.nvim'] = nil
+lua package.loaded['jqtrde'] = nil
 
 " include our theme file and pass it to lush to apply
-lua require('lush')(require('lush_theme.jqtrde.nvim'))
-
+lua require('lush')(require('jqtrde'))
